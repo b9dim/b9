@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-[90vh] flex items-center pt-32 pb-20 overflow-hidden bg-[#fdfdfd]">
+    <section id="home" className="relative min-h-[90vh] flex items-center pt-32 pb-32 overflow-hidden bg-[#fdfdfd]">
       {/* Immersive Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-20%] right-[-10%] w-[1000px] h-[1000px] bg-purple-200/30 rounded-full blur-[150px]"></div>
@@ -31,20 +31,20 @@ const Hero: React.FC = () => {
         <div className="flex flex-col items-center text-center space-y-12">
           
           {/* Interactive Stats Badge */}
-          <div className={`inline-flex items-center gap-6 px-8 py-4 bg-white shadow-xl shadow-slate-200/50 rounded-2xl border border-purple-100/50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} hover:shadow-2xl hover:border-purple-200 hover:-translate-y-1`}>
+          <div className={`flex flex-row items-center justify-center gap-2 sm:gap-4 md:gap-6 px-3 sm:px-6 md:px-8 py-3 sm:py-4 bg-white shadow-xl shadow-slate-200/50 rounded-2xl border border-purple-100/50 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} hover:shadow-2xl hover:border-purple-200 hover:-translate-y-1 w-full max-w-4xl mx-auto overflow-x-auto`}>
             {stats.map((stat, idx) => {
               const IconComponent = stat.icon;
               return (
-                <div key={idx} className="flex items-center gap-3 group/item">
-                  <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${stat.gradient} flex items-center justify-center text-white shadow-lg group-hover/item:scale-110 transition-transform duration-300`}>
-                    <IconComponent size={18} />
+                <div key={idx} className="flex items-center gap-1.5 sm:gap-2 md:gap-3 group/item flex-shrink-0">
+                  <div className={`w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-lg sm:rounded-xl bg-gradient-to-br ${stat.gradient} flex items-center justify-center text-white shadow-lg group-hover/item:scale-110 transition-transform duration-300 flex-shrink-0`}>
+                    <IconComponent size={14} className="sm:w-4 sm:h-4 md:w-[18px] md:h-[18px]" />
                   </div>
-                  <div className="text-left">
-                    <div className="text-sm font-black text-slate-900 group-hover/item:text-purple-600 transition-colors duration-300">{stat.value}</div>
-                    <div className="text-[9px] uppercase font-bold text-slate-500 tracking-wider">{stat.label}</div>
+                  <div className="text-left min-w-0">
+                    <div className="text-[10px] sm:text-xs md:text-sm font-black text-slate-900 group-hover/item:text-purple-600 transition-colors duration-300 whitespace-nowrap">{stat.value}</div>
+                    <div className="text-[7px] sm:text-[8px] md:text-[9px] uppercase font-bold text-slate-500 tracking-wider whitespace-nowrap">{stat.label}</div>
                   </div>
                   {idx < stats.length - 1 && (
-                    <div className="w-px h-8 bg-slate-200 mx-2"></div>
+                    <div className="w-px h-6 sm:h-7 md:h-8 bg-slate-200 mx-1 sm:mx-2 flex-shrink-0"></div>
                   )}
                 </div>
               );
@@ -67,28 +67,15 @@ const Hero: React.FC = () => {
           <p className="text-xl md:text-2xl text-slate-500 max-w-3xl leading-relaxed font-light">
             Full Stack Web Developer with <span className="font-bold text-slate-900">nearly 18 years</span> of programming experience, having started coding <span className="font-bold text-purple-500">at the age of 14</span>. Specialized in <span className="font-semibold text-slate-700">scalable web applications</span>, <span className="font-semibold text-slate-700">modern frontend and backend technologies</span>, <span className="font-semibold text-slate-700">UI/UX integration</span>, and <span className="font-bold text-purple-500">award-winning digital solutions</span>.
           </p>
-
-          {/* Stats */}
-          <div className="flex items-center gap-12 pt-6">
-            <div className="space-y-1">
-              <div className="text-[9px] uppercase font-black text-slate-400 tracking-widest">Connect Directly</div>
-              <div className="text-lg font-bold text-slate-900">0544450453</div>
-            </div>
-            <div className="w-px h-10 bg-slate-200"></div>
-            <div className="space-y-1">
-              <div className="text-[9px] uppercase font-black text-slate-400 tracking-widest">Experience</div>
-              <div className="text-lg font-bold text-slate-900">18+ Years</div>
-            </div>
-          </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 animate-bounce-slow">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce-slow z-20">
         <span className="text-[10px] uppercase font-black tracking-[0.4em] text-slate-500">Scroll</span>
         <div className="flex flex-col items-center gap-2">
-          <div className="w-px h-12 bg-gradient-to-b from-purple-500 via-purple-400 to-transparent"></div>
-          <ChevronDown size={20} className="text-purple-500 animate-bounce" />
+          <div className="w-px h-10 bg-gradient-to-b from-purple-500 via-purple-400 to-transparent"></div>
+          <ChevronDown size={18} className="text-purple-500 animate-bounce" />
         </div>
       </div>
     </section>
