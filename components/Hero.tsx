@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
       value: 'Award',
       label: 'Winning Projects',
       labelTablet: 'Winning',
-      labelMobile: 'Awards',
+      labelMobile: 'Winning',
       gradient: 'from-purple-600 to-indigo-600'
     },
     {
