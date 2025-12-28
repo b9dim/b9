@@ -57,7 +57,7 @@ const App: React.FC = () => {
     <div className="min-h-screen relative selection:bg-purple-200 selection:text-purple-900">
       <Navbar activeSection={activeSection} />
       
-      <main>
+      <main className="pb-20 md:pb-0">
         <Hero />
         <Skills />
         <Experience />

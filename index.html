@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     
     <!-- Primary Meta Tags -->
     <title>Abdullah Alasmari | Full Stack Web Developer | 18+ Years Experience</title>
@@ -60,6 +60,12 @@
       }
       .float { animation: float 6s ease-in-out infinite; }
       .animate-bounce-slow { animation: bounce-slow 4s ease-in-out infinite; }
+      .safe-area-inset-bottom {
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+      .pb-safe {
+        padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+      }
     </style>
   <script type="importmap">
 {

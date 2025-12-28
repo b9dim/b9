@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] flex items-center pt-32 pb-32 overflow-hidden bg-[#fdfdfd]"
+      className="relative min-h-[90vh] flex items-center pt-24 md:pt-32 pb-20 md:pb-32 overflow-hidden bg-[#fdfdfd]"
     >
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
@@ -139,16 +139,18 @@ const Hero: React.FC = () => {
             </span>
             .
           </p>
+
+          {/* Logo */}
+          <div className="pt-8 flex justify-center items-center">
+            <img 
+              src="/logo.svg" 
+              alt="Logo" 
+              className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 opacity-80 hover:opacity-100 transition-opacity duration-300 animate-bounce-slow"
+              style={{ filter: 'brightness(0) invert(1)' }}
+            />
+          </div>
         </div>
       </div>
-
-      {/* Logo */}
-      <img 
-        src="/logo.svg" 
-        alt="Logo" 
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 opacity-80 hover:opacity-100 transition-opacity duration-300 z-20 animate-bounce-slow"
-        style={{ filter: 'brightness(0) invert(1)' }}
-      />
     </section>
   );
 };
