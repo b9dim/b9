@@ -10,9 +10,9 @@ const Hero: React.FC = () => {
   }, []);
 
   const stats = [
-    { icon: Code, value: '18+', label: 'Years Experience', gradient: 'from-purple-500 to-purple-600' },
-    { icon: Trophy, value: 'Award', label: 'Winning Projects', gradient: 'from-purple-600 to-indigo-600' },
-    { icon: Sparkles, value: 'Full', label: 'Stack Expertise', gradient: 'from-indigo-500 to-purple-500' },
+    { icon: Code, value: '18+', label: 'Years Experience', labelShort: 'Experience', gradient: 'from-purple-500 to-purple-600' },
+    { icon: Trophy, value: 'Award', label: 'Winning Projects', labelShort: 'Winning', gradient: 'from-purple-600 to-indigo-600' },
+    { icon: Sparkles, value: 'Full', label: 'Stack Expertise', labelShort: 'Expertise', gradient: 'from-indigo-500 to-purple-500' },
   ];
 
   return (
@@ -41,7 +41,10 @@ const Hero: React.FC = () => {
                   </div>
                   <div className="text-left min-w-0">
                     <div className="text-[10px] sm:text-xs md:text-sm font-black text-slate-900 group-hover/item:text-purple-600 transition-colors duration-300 whitespace-nowrap">{stat.value}</div>
-                    <div className="text-[7px] sm:text-[8px] md:text-[9px] uppercase font-bold text-slate-500 tracking-wider whitespace-nowrap">{stat.label}</div>
+                    <div className="text-[7px] sm:text-[8px] md:text-[9px] uppercase font-bold text-slate-500 tracking-wider whitespace-nowrap">
+                      <span className="sm:hidden">{stat.labelShort}</span>
+                      <span className="hidden sm:inline">{stat.label}</span>
+                    </div>
                   </div>
                   {idx < stats.length - 1 && (
                     <div className="w-px h-6 sm:h-7 md:h-8 bg-slate-200 mx-1 sm:mx-2 flex-shrink-0"></div>
