@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Code, Trophy, Sparkles } from 'lucide-react';
+import { Code, Trophy, Sparkles } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -142,16 +142,13 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Scroll */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce-slow z-20">
-        <span className="text-[10px] uppercase font-black tracking-[0.4em] text-slate-500">
-          Scroll
-        </span>
-        <div className="flex flex-col items-center gap-2">
-          <div className="w-px h-10 bg-gradient-to-b from-purple-500 via-purple-400 to-transparent" />
-          <ChevronDown size={18} className="text-purple-500 animate-bounce" />
-        </div>
-      </div>
+      {/* Logo */}
+      <img 
+        src="/logo.svg" 
+        alt="Logo" 
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 opacity-80 hover:opacity-100 transition-opacity duration-300 z-20 animate-bounce-slow"
+        style={{ filter: 'brightness(0) invert(1)' }}
+      />
     </section>
   );
 };
