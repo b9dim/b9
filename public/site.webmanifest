@@ -1,0 +1,18 @@
+{
+  "name": "Abdullah Alasmari - Full Stack Developer Portfolio",
+  "short_name": "Abdullah Alasmari",
+  "description": "Full Stack Web Developer with nearly 18 years of programming experience",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#a855f7"
+}
+
